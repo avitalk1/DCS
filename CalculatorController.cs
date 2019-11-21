@@ -135,7 +135,7 @@ namespace OnlineCalculator.Controllers
         }
         //Get api/calc/Func16MinOf4Numbers?number=&number=&numbers=&numbers=
         [HttpGet("Func16MinOf4Numbers")]
-        public int Func15MinOf4Numbers(List<int> numbers)
+        public int Func16MinOf4Numbers(List<int> numbers)
         {
             if(numbers == null)
             {
