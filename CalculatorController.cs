@@ -91,16 +91,6 @@ namespace OnlineCalculator.Controllers
         public List<int> Func13MathOpOnTwoNumbers(int num1, int num2)
         {
             var results = new List<int>();
-            int? checkNum1 = num1;
-            int? checkNum2 = num2;
-            if ((checkNum1 ?? 0) == 0)
-            {
-                num1 = 0;
-            }
-            if ((checkNum2 ?? 0) == 0)
-            {
-                num2 = 0;
-            }
             results.Add(num1 + num2);
             results.Add(num1 - num2);
             results.Add(num1 * num2);
@@ -116,8 +106,8 @@ namespace OnlineCalculator.Controllers
         {
             var numberArr = new List<int>();
             string numString;
-            int? checkNumber = number;
-            if ((checkNumber ?? 0) == 0)
+
+            if (number == 0 || number<1000)
             {
                 number = 0;
                 numString = number.ToString()+ number.ToString()+ number.ToString()+ number.ToString();
